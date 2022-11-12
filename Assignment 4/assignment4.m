@@ -20,7 +20,7 @@ normDay2mean = (day2Weight ./ averageWeight) ; %calculates normalized mean of da
 normDay3mean = (day3Weight ./ averageWeight) ; %calculates normalized mean of day3 weights
 
 %Puts all variables in a 28x1 vector
-%numel returns the number of elements in SubjectID length (26) and adds zeros to the end of the
+%numel returns the number of elements in SubjectID length (28) and adds zeros to the end of the
 %vector until the variable reaches 26 spots to make all rows equivalent. 
 maleIsoIndMeans(numel(SubjectID)) = 0 ;  
 femaleIsoIndMeans(numel(SubjectID)) = 0 ;
@@ -28,18 +28,18 @@ maleGroupIsoMean(numel(SubjectID)) = 0 ;
 maleGroupIsoMean= maleGroupIsoMean' ;
 femaleGroupIsoMean(numel(SubjectID))= 0 ;
 femaleGroupIsoMean= femaleGroupIsoMean' ;
-%transpose the vector's rows and columns. Making the 1x26 to 26x1 
+%transpose the vector's rows and columns. Making the 1x28 to 28x1 
 day1toDay2(numel(SubjectID))= 0 ;
 day2toDay3(numel(SubjectID))= 0 ;
 normDay1mean(numel(SubjectID))= 0 ;
 normDay1mean= normDay1mean' ;
-%transpose the vector's rows and columns. Making the 1x26 to 26x1 
+%transpose the vector's rows and columns. Making the 1x28 to 28x1 
 normDay2mean(numel(SubjectID))= 0 ;
 normDay2mean = normDay2mean' ;
-%transpose the vector's rows and columns. Making the 1x26 to 26x1 
+%transpose the vector's rows and columns. Making the 1x28 to 28x1 
 normDay3mean(numel(SubjectID))= 0 ;
 normDay3mean = normDay3mean' ;
-%transpose the vector's rows and columns. Making the 1x26 to 26x1 
+%transpose the vector's rows and columns. Making the 1x28 to 28x1 
 
 results = table(maleIsoIndMeans, femaleIsoIndMeans, maleGroupIsoMean, femaleGroupIsoMean, day1toDay2, day2toDay3, normDay1mean, normDay2mean, normDay3mean);
 %creates a 28x9 table of the data calculated for those variables
